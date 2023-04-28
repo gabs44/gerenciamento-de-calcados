@@ -16,6 +16,9 @@ public class Funcionario {
         this.funcao = funcao;
     }
 
+    public Funcionario() {
+    }
+
     public String getNomeCompleto() {
         return nomeCompleto;
     }

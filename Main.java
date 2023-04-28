@@ -48,30 +48,52 @@ public class Main {
 
 
         System.out.println("MENU\n1 - exibir marca do produto \n2 - exibir descricao do produto \n3 -" +
-                " exibir preco do produto \n");
+                " exibir preço do produto \n4 - cadastrar funcionário\n insira 0 para encerrar");
+
+        int indiceFuncionario = 0;
+        Funcionario[] funcionario = new Funcionario[3];
+        Scanner entrada = new Scanner(System.in);
+
 
         do{
-        Scanner entrada = new Scanner(System.in);
-        System.out.println("Informe um número: \nInsira 0 para encerrar ");
-        resposta = entrada.nextInt();
-        switch (resposta){
-            case 1:
-                System.out.println(marca);
-                break;
-            case 2:
-                System.out.println(descricao);
-                break;
-            case 3:
-                System.out.println(preco);
-                break;
-            case 0:
-                System.out.println("Programa encerrado");
-                break;
-            default:
-                System.out.println("Informe um numero válido");
-        }
+            System.out.println("Informe um número: ");
+            resposta = entrada.nextInt();
+            entrada.nextLine();
+
+            switch (resposta){
+                case 1:
+                    System.out.println(marca);
+                    break;
+                case 2:
+                    System.out.println(descricao);
+                    break;
+                case 3:
+                    System.out.println(preco);
+                    break;
+                case 4:
+                    if(indiceFuncionario != 3) {
+                        funcionario[indiceFuncionario] = new Funcionario();
+                        System.out.println("Informe o nome completo: ");
+                        funcionario[indiceFuncionario].setNomeCompleto(entrada.nextLine());
+                        System.out.println("Informe o CPF: ");
+                        funcionario[indiceFuncionario].setCPF(entrada.nextLine());
+                        System.out.println("Informe o salário: ");
+                        funcionario[indiceFuncionario].setSalario(entrada.nextDouble());
+                        indiceFuncionario++;
+                        entrada.nextLine();
+                    }else{
+                        System.out.println("Vetor cheio!");
+
+                    }
+                case 0:
+                    break;
+
+                default:
+                    System.out.println("Informe um numero válido");
+            }
 
         }while(resposta!=0);
+        System.out.println("Programa encerrado");
 
 
 
