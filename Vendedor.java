@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Calendar;
 
+// Implementação de herança
 public class Vendedor extends Funcionario {
     private ArrayList<Venda> vendas = new ArrayList<Venda>();
     private double comissao;
