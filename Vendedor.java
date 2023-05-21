@@ -1,10 +1,12 @@
 import java.util.ArrayList;
-import java.util.Calendar;
 
 // Implementação de herança
 public class Vendedor extends Funcionario {
     private ArrayList<Venda> vendas = new ArrayList<Venda>();
     private double comissao;
+
+    public Vendedor() {
+    }
 
     public Vendedor(String nomeCompleto, String CPF, String telefone, String endereco,
                     double salario, String funcao, double comissao) {
@@ -24,12 +26,13 @@ public class Vendedor extends Funcionario {
         this.comissao = comissao;
     }
 
-    double calculaSalario(int mes, int ano){
+    @Override
+    public double calculaSalario(int mes, int ano){
         double valorComissao = calculaComissao(mes, ano);
         return valorComissao + getSalario();
     }
 
-    double calculaComissao(int mes, int ano){
+    private double calculaComissao(int mes, int ano){
         double total =0;
         for (Venda venda: vendas) {
             if (venda.getData().getYear() == ano && venda.getData().getMonth().getValue() == mes) {
@@ -47,4 +50,6 @@ public class Vendedor extends Funcionario {
     void removeVenda(Venda venda){
         vendas.remove(venda);
     }
+
+
 }

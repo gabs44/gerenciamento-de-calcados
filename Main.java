@@ -72,7 +72,7 @@ public class Main {
                     break;
                 case 4:
                     if(indiceFuncionario != 3) {
-                        funcionario[indiceFuncionario] = new Funcionario();
+                        funcionario[indiceFuncionario] = new Vendedor();
                         System.out.println("Informe o nome completo: ");
                         funcionario[indiceFuncionario].setNomeCompleto(entrada.nextLine());
                         System.out.println("Informe o CPF: ");

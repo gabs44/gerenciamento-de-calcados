@@ -1,4 +1,4 @@
-public class Funcionario {
+public abstract class Funcionario {
     private String nomeCompleto;
     private String CPF;
     private String telefone;
@@ -66,4 +66,6 @@ public class Funcionario {
     public void setFuncao(String funcao) {
         this.funcao = funcao;
     }
+
+    public abstract double calculaSalario(int mes, int ano);
 }
