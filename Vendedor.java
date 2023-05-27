@@ -32,16 +32,28 @@ public class Vendedor extends Funcionario {
         return valorComissao + getSalario();
     }
 
-    private double calculaComissao(int mes, int ano){
+    public double calculaComissao(int mes, int ano){
         double total =0;
         for (Venda venda: vendas) {
             if (venda.getData().getYear() == ano && venda.getData().getMonth().getValue() == mes) {
                 total += venda.calculaTotal();
-                System.out.println(venda.calculaTotal());
             }
         }
         return total * comissao;
     }
+
+
+    public double calculaComissao(int ano){
+        double total = 0;
+        for (Venda venda: vendas) {
+            if (venda.getData().getYear() == ano) {
+                total += venda.calculaTotal();
+            }
+        }
+        return total * comissao;
+    }
+
+
 
     void adicionaVenda(Venda venda){
         vendas.add(venda);
@@ -49,6 +61,11 @@ public class Vendedor extends Funcionario {
 
     void removeVenda(Venda venda){
         vendas.remove(venda);
+    }
+
+    @Override
+    public String getFuncao() {
+        return "Vendedor";
     }
 
 

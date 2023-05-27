@@ -1,12 +1,24 @@
 import java.util.ArrayList;
 
 public class Loja {
+    String nome;
     final private ArrayList<Venda> vendas = new ArrayList<>();
     final private ArrayList<Item> estoque = new ArrayList<>();
     final private ArrayList<Produto> produtoLoja = new ArrayList<>();
     final private ArrayList<Funcionario> funcionarios = new ArrayList<>();
 
 
+    public Loja(String nome) {
+        this.nome = nome;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
 
     public ArrayList<Venda> getVendas() {
         return vendas;

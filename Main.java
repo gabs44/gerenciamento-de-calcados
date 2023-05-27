@@ -5,9 +5,9 @@ import java.util.Scanner;
 import java.util.UUID;
 
 public class Main {
+    static final String nomeLoja = "Mifat";
     public static void main(String[] args) {
-
-        Loja loja = new Loja();
+        Loja loja = new Loja(nomeLoja);
         Produto p1 = new Produto("P0001", "vizano", 159.90, "vermelho", "Salto alto", "adulto");
         Item item1 = new Item(p1, 10, 36);
         ItemVenda itemVenda1 = new ItemVenda(item1, 2);
@@ -17,6 +17,8 @@ public class Main {
         venda1.adicionaItem(itemVenda1);
         vendedor1.adicionaVenda(venda1);
         System.out.println(vendedor1.calculaSalario(5,2022));
+        System.out.println(vendedor1.calculaComissao(5, 2022));
+        System.out.println(vendedor1.calculaComissao(2022));
 
 
 
