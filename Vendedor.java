@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 // Implementação de herança
-public class Vendedor extends Funcionario {
+public class Vendedor extends Funcionario implements Comissionado{
     private ArrayList<Venda> vendas = new ArrayList<Venda>();
     private double comissao;
 
