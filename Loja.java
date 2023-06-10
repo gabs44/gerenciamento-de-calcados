@@ -1,3 +1,4 @@
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class Loja {
@@ -69,6 +70,16 @@ public class Loja {
 
     void removeFuncionario(Funcionario funcionario){
         funcionarios.remove(funcionario);
+    }
+
+    double calculaFaturamento(LocalDate dataInicio, LocalDate dataLimite) {
+        double saldoVendas = 0;
+        for (Venda venda : vendas) {
+            if (venda.getData().isAfter(dataInicio) && venda.getData().isBefore(dataLimite)) {
+                saldoVendas += venda.calculaTotal();
+            }
+        }
+        return saldoVendas;
     }
 
 }
