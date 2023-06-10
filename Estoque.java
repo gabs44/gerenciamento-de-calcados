@@ -1,10 +1,10 @@
-public class Item {
+public class Estoque {
     private Produto produto;
     private int quantidadeEmEstoque;
     private int numeracao;
 
 
-    public Item(Produto produto, int quantidadeEmEstoque, int numeracao) {
+    public Estoque(Produto produto, int quantidadeEmEstoque, int numeracao) {
         this.produto = produto;
         this.quantidadeEmEstoque = quantidadeEmEstoque;
         this.numeracao = numeracao;

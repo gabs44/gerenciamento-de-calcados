@@ -1,16 +1,13 @@
-import java.io.PipedOutputStream;
 import java.time.LocalDate;
-import java.util.Date;
 import java.util.Scanner;
-import java.util.UUID;
 
 public class Main {
     static final String nomeLoja = "Mifat";
     public static void main(String[] args) {
         Loja loja = new Loja(nomeLoja);
         Produto p1 = new Produto("P0001", "vizano", 159.90, "vermelho", "Salto alto", "adulto");
-        Item item1 = new Item(p1, 10, 36);
-        ItemVenda itemVenda1 = new ItemVenda(item1, 2);
+        Estoque estoque1 = new Estoque(p1, 10, 36);
+        ItemVenda itemVenda1 = new ItemVenda(estoque1, 2);
         Vendedor vendedor1 = new Vendedor("Antonio Jacinto Oliveira", "12345678912", "83993456782",
                 "Jardim Oásis", 1250, "vendedor", 0.02  );
         Venda venda1 = new Venda(LocalDate.of(2022,5,30 ), vendedor1 );

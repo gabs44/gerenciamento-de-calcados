@@ -1,20 +1,20 @@
 public class ItemVenda {
-    private Item item;
+    private Estoque estoque;
     private double precoUnitario;
     private int quantidade;
 
-    public ItemVenda(Item item, int quantidade) {
-        this.item = item;
-        this.precoUnitario = item.getPrecoItem();
+    public ItemVenda(Estoque estoque, int quantidade) {
+        this.estoque = estoque;
+        this.precoUnitario = estoque.getPrecoItem();
         this.quantidade = quantidade;
     }
 
-    public Item getItem() {
-        return item;
+    public Estoque getItem() {
+        return estoque;
     }
 
-    public void setItem(Item item) {
-        this.item = item;
+    public void setItem(Estoque estoque) {
+        this.estoque = estoque;
     }
 
     public double getPrecoUnitario() {

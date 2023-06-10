@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class Loja {
     String nome;
     final private ArrayList<Venda> vendas = new ArrayList<>();
-    final private ArrayList<Item> estoque = new ArrayList<>();
+    final private ArrayList<Estoque> estoque = new ArrayList<>();
     final private ArrayList<Produto> produtoLoja = new ArrayList<>();
     final private ArrayList<Funcionario> funcionarios = new ArrayList<>();
 
@@ -24,7 +24,7 @@ public class Loja {
         return vendas;
     }
 
-    public ArrayList<Item> getEstoque() {
+    public ArrayList<Estoque> getEstoque() {
         return estoque;
     }
 
@@ -47,12 +47,12 @@ public class Loja {
         vendas.remove(venda);
     }
 
-    void adicionaItem(Item item){
-        estoque.add(item);
+    void adicionaItem(Estoque estoque){
+        this.estoque.add(estoque);
     }
 
-    void removeItem(Item item){
-        estoque.remove(item);
+    void removeItem(Estoque estoque){
+        this.estoque.remove(estoque);
     }
 
     void adicionaProduto(Produto produto){
