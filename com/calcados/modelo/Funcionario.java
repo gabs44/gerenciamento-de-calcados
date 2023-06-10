@@ -1,3 +1,5 @@
+package com.calcados.modelo;
+
 public abstract class Funcionario {
     private String nomeCompleto;
     private String CPF;

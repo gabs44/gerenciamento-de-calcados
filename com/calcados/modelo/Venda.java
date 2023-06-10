@@ -1,7 +1,9 @@
+package com.calcados.modelo;
+
+import com.calcados.modelo.ItemVenda;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.UUID;
 
 public class Venda {

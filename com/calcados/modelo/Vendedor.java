@@ -1,7 +1,11 @@
+package com.calcados.modelo;
+
+import com.calcados.enumerations.Comissionado;
+
 import java.util.ArrayList;
 
 // Implementação de herança
-public class Vendedor extends Funcionario implements Comissionado{
+public class Vendedor extends Funcionario implements Comissionado {
     private ArrayList<Venda> vendas = new ArrayList<Venda>();
     private double comissao;
 
@@ -65,7 +69,7 @@ public class Vendedor extends Funcionario implements Comissionado{
 
     @Override
     public String getFuncao() {
-        return "Vendedor";
+        return "com.calcados.modelo.Vendedor";
     }
 
 

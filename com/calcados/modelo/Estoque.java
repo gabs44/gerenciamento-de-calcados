@@ -1,3 +1,5 @@
+package com.calcados.modelo;
+
 public class Estoque {
     private Produto produto;
     private int quantidadeEmEstoque;

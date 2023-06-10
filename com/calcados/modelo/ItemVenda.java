@@ -1,3 +1,7 @@
+package com.calcados.modelo;
+
+import com.calcados.modelo.Estoque;
+
 public class ItemVenda {
     private Estoque estoque;
     private double precoUnitario;

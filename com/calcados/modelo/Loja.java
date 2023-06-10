@@ -1,3 +1,8 @@
+package com.calcados.modelo;
+
+import com.calcados.modelo.Estoque;
+import com.calcados.modelo.Funcionario;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 

@@ -1,3 +1,5 @@
+package com.calcados.modelo;
+
 public class Produto {
     private String codigo;
     private String marca;

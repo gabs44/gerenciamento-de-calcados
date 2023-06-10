@@ -1,3 +1,7 @@
+package com.calcados;
+
+import com.calcados.modelo.*;
+
 import java.time.LocalDate;
 import java.util.Scanner;
 
@@ -11,8 +15,8 @@ public class Main {
         Vendedor vendedor1 = new Vendedor("Antonio Jacinto Oliveira", "12345678912", "83993456782",
                 "Jardim Oásis", 1250, "vendedor", 0.02  );
         Venda venda1 = new Venda(LocalDate.of(2022,5,30 ), vendedor1 );
-        venda1.adicionaItem(itemVenda1);
-        vendedor1.adicionaVenda(venda1);
+//        venda1.adicionaItem(itemVenda1);
+//        vendedor1.adicionaVenda(venda1);
         System.out.println(vendedor1.calculaSalario(5,2022));
         System.out.println(vendedor1.calculaComissao(5, 2022));
         System.out.println(vendedor1.calculaComissao(2022));
