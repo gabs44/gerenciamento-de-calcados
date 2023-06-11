@@ -1,6 +1,6 @@
 package com.calcados.modelo;
 
-import com.calcados.enumerations.Comissionado;
+import com.calcados.interfaces.Comissionado;
 
 import java.util.ArrayList;
 

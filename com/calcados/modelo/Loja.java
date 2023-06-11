@@ -1,7 +1,5 @@
 package com.calcados.modelo;
 
-import com.calcados.modelo.Estoque;
-import com.calcados.modelo.Funcionario;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -16,6 +14,7 @@ public class Loja {
 
     public Loja(String nome) {
         this.nome = nome;
+        adicionaProduto(new Produto("12345", "Santa lola", 150, "preto", "salto", "adulto" ));
     }
 
     public String getNome() {
