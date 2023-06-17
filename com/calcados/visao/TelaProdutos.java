@@ -32,10 +32,9 @@ public class TelaProdutos {
         }
 
         JTable tabela = new JTable(dados, colunas);
-        tabela.setBounds(20,200,800,400);
         JScrollPane barraRolagem = new JScrollPane(tabela);
 
-        painel.add(tabela);
-        painel.add(barraRolagem);
+        barraRolagem.setBounds(20, 100, 760, 550); // define o tamanho do JScrollPane
+        painel.add(barraRolagem); // Adiciona o JScrollPane ao painel em vez da tabela
     }
 }
