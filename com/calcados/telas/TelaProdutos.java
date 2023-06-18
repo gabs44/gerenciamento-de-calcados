@@ -55,5 +55,19 @@ public class TelaProdutos {
 
         barraRolagem.setBounds(20, 100, 690, 550); // define o tamanho do JScrollPane
         painel.add(barraRolagem); // Adiciona o JScrollPane ao painel em vez da tabela
+
+        JButton botaoNovoProduto= new JButton("Novo produto");
+        botaoNovoProduto.setBounds(650,20,130,40);
+        botaoNovoProduto.setFont(
+                new Font("Arial", Font.BOLD, 10));
+        painel.add(botaoNovoProduto);
+
+        botaoNovoProduto.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                TelaCadastroProduto telaCadastroProduto = new TelaCadastroProduto(loja);
+                telaCadastroProduto.setVisible(true);
+            }
+        });
     }
 }

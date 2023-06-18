@@ -62,39 +62,39 @@ public class Loja {
     }
 
 
-    void adicionaVenda(Venda venda){
+    public void adicionaVenda(Venda venda){
         vendas.add(venda);
     }
 
-    void removeVenda(Venda venda){
+    public void removeVenda(Venda venda){
         vendas.remove(venda);
     }
 
-    void adicionaItem(Estoque estoque){
+    public void adicionaItem(Estoque estoque){
         this.estoque.add(estoque);
     }
 
-    void removeItem(Estoque estoque){
+    public void removeItem(Estoque estoque){
         this.estoque.remove(estoque);
     }
 
-    void adicionaProduto(Produto produto){
+    public void adicionaProduto(Produto produto){
         produtoLoja.add(produto);
     }
 
-    void removeProduto(Produto produto){
+    public void removeProduto(Produto produto){
         produtoLoja.remove(produto);
     }
 
-    void adicionaFuncionario(Funcionario funcionario){
+    public void adicionaFuncionario(Funcionario funcionario){
         funcionarios.add(funcionario);
     }
 
-    void removeFuncionario(Funcionario funcionario){
+    public void removeFuncionario(Funcionario funcionario){
         funcionarios.remove(funcionario);
     }
 
-    double calculaFaturamento(LocalDate dataInicio, LocalDate dataLimite) {
+    public double calculaFaturamento(LocalDate dataInicio, LocalDate dataLimite) {
         double saldoVendas = 0;
         for (Venda venda : vendas) {
             if (venda.getData().isAfter(dataInicio) && venda.getData().isBefore(dataLimite)) {

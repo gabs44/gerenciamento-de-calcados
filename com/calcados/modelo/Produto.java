@@ -10,6 +10,9 @@ public class Produto {
     private String descricao;
     private String faixaEtaria;
 
+    public Produto() {
+    }
+
     public Produto(String codigo, String marca, double preco, String cor, String descricao, String faixaEtaria){
         this.codigo = codigo;
         this.marca = marca;

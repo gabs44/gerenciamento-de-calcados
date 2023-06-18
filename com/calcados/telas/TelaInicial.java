@@ -55,9 +55,9 @@ public class TelaInicial extends JFrame {
         private void botaoVoltar(Container painel){
             ehHome = true;
             JButton botaoVoltar = new JButton("Voltar");
-            botaoVoltar.setBounds(30,30,90,40);
+            botaoVoltar.setBounds(20,20,90,40);
             botaoVoltar.setFont(
-                    new Font("Arial", Font.BOLD, 12));
+                    new Font("Arial", Font.BOLD, 10));
             painel.add(botaoVoltar);
             botaoVoltar.addMouseListener(new MouseAdapter() {
                 @Override
