@@ -1,14 +1,19 @@
-package com.calcados.visao;
+package com.calcados.telas;
 
 import com.calcados.modelo.Loja;
 import com.calcados.modelo.Produto;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class TelaProdutos {
 
     public static void criarConteudo(Container painel, Loja loja){
+        int altura = 120;
+        int largura = 710;
+
         JLabel labelTitulo = new JLabel(
                 "Produtos");
         labelTitulo.setBounds(20,20,750,30);
@@ -29,12 +34,26 @@ public class TelaProdutos {
             dados[i][3] = produto.getCor();
             dados[i][4] = produto.getDescricao();
             dados[i][5] = produto.getFaixaEtaria();
+            JButton detalhes = new JButton("Detalhes");
+            detalhes.setFont(new Font("Arial", Font.BOLD, 8));
+            detalhes.setBounds(largura,altura,75,15);
+            painel.add(detalhes);
+            altura+=15;
+
+            detalhes.addMouseListener(new MouseAdapter() {
+                @Override
+                public void mouseClicked(MouseEvent e) {
+                    TelaEstoque te = new TelaEstoque(loja, produto);
+                    te.setVisible(true);
+                }
+            });
+
         }
 
         JTable tabela = new JTable(dados, colunas);
         JScrollPane barraRolagem = new JScrollPane(tabela);
 
-        barraRolagem.setBounds(20, 100, 760, 550); // define o tamanho do JScrollPane
+        barraRolagem.setBounds(20, 100, 690, 550); // define o tamanho do JScrollPane
         painel.add(barraRolagem); // Adiciona o JScrollPane ao painel em vez da tabela
     }
 }

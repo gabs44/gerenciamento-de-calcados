@@ -1,5 +1,7 @@
 package com.calcados.modelo;
 
+import java.util.Objects;
+
 public class Produto {
     private String codigo;
     private String marca;
@@ -63,5 +65,12 @@ public class Produto {
 
     public void setFaixaEtaria(String faixaEtaria) {
         this.faixaEtaria = faixaEtaria;
+    }
+
+
+    @Override
+    public boolean equals(Object obj) {
+        Produto produto = (Produto) obj;
+        return Objects.equals(this.codigo, produto.getCodigo());
     }
 }

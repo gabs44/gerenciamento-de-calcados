@@ -3,6 +3,7 @@ package com.calcados.modelo;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Loja {
     String nome;
@@ -14,7 +15,24 @@ public class Loja {
 
     public Loja(String nome) {
         this.nome = nome;
-        adicionaProduto(new Produto("12345", "Santa lola", 150, "preto", "salto", "adulto" ));
+
+        Produto p1 = new Produto("12345", "Santa lola", 150, "preto", "salto", "adulto" );
+        adicionaProduto(p1);
+        Produto p2 = new Produto("56792", "Grendene", 150, "preto", "salto", "adulto" );
+        adicionaProduto(p2);
+
+        Estoque p137 = new Estoque(p1, 8, 37);
+        Estoque p135 = new Estoque(p1, 3, 35);
+        Estoque p237= new Estoque(p2, 9, 37);
+        Estoque p234= new Estoque(p2, 2, 34);
+        Estoque p239= new Estoque(p2, 5, 39);
+
+        adicionaItem(p137);
+        adicionaItem(p135);
+        adicionaItem(p237);
+        adicionaItem(p234);
+        adicionaItem(p239);
+
     }
 
     public String getNome() {
@@ -25,21 +43,21 @@ public class Loja {
         this.nome = nome;
     }
 
-    public ArrayList<Venda> getVendas() {
+    public List<Venda> getVendas() {
         return vendas;
     }
 
-    public ArrayList<Estoque> getEstoque() {
+    public List<Estoque> getEstoque() {
         return estoque;
     }
 
 
-    public ArrayList<Produto> getProduto() {
+    public List<Produto> getProduto() {
         return produtoLoja;
     }
 
 
-    public ArrayList<Funcionario> getFuncionarios() {
+    public List<Funcionario> getFuncionarios() {
         return funcionarios;
     }
 
@@ -84,6 +102,16 @@ public class Loja {
             }
         }
         return saldoVendas;
+    }
+
+    public List<Estoque> retornaEstoqueProduto(Produto produto){
+        ArrayList<Estoque> resultado = new ArrayList<>();
+        for (Estoque itemEstoque: estoque) {
+            if(itemEstoque.getProduto().equals(produto)){
+                resultado.add(itemEstoque);
+            }
+        }
+        return resultado;
     }
 
 }

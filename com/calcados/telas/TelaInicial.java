@@ -1,7 +1,6 @@
 package com.calcados.telas;
 
 import com.calcados.modelo.Loja;
-import com.calcados.visao.TelaProdutos;
 
 import javax.swing.*;
 import java.awt.*;
