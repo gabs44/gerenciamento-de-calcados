@@ -33,7 +33,7 @@ public class TelaProdutos {
             dados[i][2] = String.valueOf(produto.getPreco());
             dados[i][3] = produto.getCor();
             dados[i][4] = produto.getDescricao();
-            dados[i][5] = produto.getFaixaEtaria();
+            dados[i][5] = String.valueOf(produto.getFaixaEtaria());
             JButton detalhes = new JButton("Detalhes");
             detalhes.setFont(new Font("Arial", Font.BOLD, 8));
             detalhes.setBounds(largura,altura,75,15);

@@ -77,14 +77,14 @@ public class TelaCadastroProduto extends JFrame {
         JComboBox<FaixaEtaria> campoFaixaEtaria = new JComboBox<>(FaixaEtaria.values());
         campoFaixaEtaria.setBounds(130, 220, 250, 30);
         painel.add(campoFaixaEtaria);
-        campoFaixaEtaria.setSelectedIndex(2);
+        campoFaixaEtaria.setSelectedIndex(1);
 
-        produto.setFaixaEtaria(Objects.requireNonNull(campoFaixaEtaria.getSelectedItem()).toString());
+        produto.setFaixaEtaria(FaixaEtaria.Adulto);
 
         campoFaixaEtaria.addItemListener(e -> {
             if (e.getStateChange() == ItemEvent.SELECTED) {
                 FaixaEtaria faixaEtaria = (FaixaEtaria) campoFaixaEtaria.getSelectedItem();
-                produto.setFaixaEtaria(faixaEtaria.toString());
+                produto.setFaixaEtaria(faixaEtaria);
             }
         });
     }

@@ -1,5 +1,7 @@
 package com.calcados.modelo;
 
+import com.calcados.enumerations.FaixaEtaria;
+
 import java.util.Objects;
 
 public class Produto {
@@ -8,12 +10,12 @@ public class Produto {
     private double preco;
     private String cor;
     private String descricao;
-    private String faixaEtaria;
+    private FaixaEtaria faixaEtaria;  // Usa o tipo criado no enum para garantir integridade
 
     public Produto() {
     }
 
-    public Produto(String codigo, String marca, double preco, String cor, String descricao, String faixaEtaria){
+    public Produto(String codigo, String marca, double preco, String cor, String descricao, FaixaEtaria faixaEtaria){
         this.codigo = codigo;
         this.marca = marca;
         this.preco = preco;
@@ -62,11 +64,11 @@ public class Produto {
         this.descricao = descricao;
     }
 
-    public String getFaixaEtaria() {
+    public FaixaEtaria getFaixaEtaria() {
         return faixaEtaria;
     }
 
-    public void setFaixaEtaria(String faixaEtaria) {
+    public void setFaixaEtaria(FaixaEtaria faixaEtaria) {
         this.faixaEtaria = faixaEtaria;
     }
 

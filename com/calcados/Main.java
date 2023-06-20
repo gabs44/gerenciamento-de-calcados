@@ -1,5 +1,6 @@
 package com.calcados;
 
+import com.calcados.enumerations.FaixaEtaria;
 import com.calcados.modelo.*;
 
 import java.time.LocalDate;
@@ -9,7 +10,7 @@ public class Main {
     static final String nomeLoja = "Mifat";
     public static void main(String[] args) {
         Loja loja = new Loja(nomeLoja);
-        Produto p1 = new Produto("P0001", "vizano", 159.90, "vermelho", "Salto alto", "adulto");
+        Produto p1 = new Produto("P0001", "vizano", 159.90, "vermelho", "Salto alto", FaixaEtaria.Adulto);
         Estoque estoque1 = new Estoque(p1, 10, 36);
         ItemVenda itemVenda1 = new ItemVenda(estoque1, 2);
         Vendedor vendedor1 = new Vendedor("Antonio Jacinto Oliveira", "12345678912", "83993456782",
