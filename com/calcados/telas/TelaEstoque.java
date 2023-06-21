@@ -60,7 +60,7 @@ public class TelaEstoque extends JFrame {
 
         for (Estoque itemEstoque : estoque) {
             Object[] row = new Object[modelo.getColumnCount()];
-            row[0] = itemEstoque.getNumeracao();
+            row[0] = itemEstoque.getNumeracao(); //row = linha
             row[1] = itemEstoque.getQuantidadeEmEstoque();
             modelo.addRow(row);
         }
@@ -74,8 +74,8 @@ public class TelaEstoque extends JFrame {
     void criaBotoes(Container painel) {
 
         JButton botaoSalvarAlteracoes = new JButton("Salvar");
-        botaoSalvarAlteracoes.setBounds(260,325,90,30);
-        botaoSalvarAlteracoes.setFont(new Font("Arial", Font.BOLD, 8));
+        botaoSalvarAlteracoes.setBounds(150,325,90,30);
+        botaoSalvarAlteracoes.setFont(new Font("Arial", Font.BOLD, 10));
         painel.add(botaoSalvarAlteracoes);
 
         botaoSalvarAlteracoes.addActionListener(new ActionListener() {

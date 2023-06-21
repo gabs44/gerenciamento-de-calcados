@@ -3,7 +3,7 @@ package com.calcados.modelo;
 import com.calcados.modelo.Estoque;
 
 public class ItemVenda {
-    private Estoque estoque;
+    private Estoque estoque; //precisa saber a numeração em estoque
     private double precoUnitario;
     private int quantidade;
 

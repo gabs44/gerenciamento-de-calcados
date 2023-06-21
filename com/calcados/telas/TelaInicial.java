@@ -77,7 +77,6 @@ public class TelaInicial extends JFrame {
             labelTitulo.setFont(
                     new Font("Arial", Font.BOLD, 20));
             labelTitulo.setHorizontalAlignment(JLabel.CENTER);
-//        labelTitulo.setToolTipText("Exemplo");
             painel.add(labelTitulo);
 
             JButton botaoVenda = new JButton("VENDA");

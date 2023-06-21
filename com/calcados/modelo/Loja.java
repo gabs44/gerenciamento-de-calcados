@@ -8,11 +8,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Loja {
-    String nome;
-    final private ArrayList<Venda> vendas = new ArrayList<>();
-    final private ArrayList<Estoque> estoque = new ArrayList<>();
-    final private ArrayList<Produto> produtoLoja = new ArrayList<>();
-    final private ArrayList<Funcionario> funcionarios = new ArrayList<>();
+    String nome; //nome da loja
+    final private ArrayList<Venda> vendas = new ArrayList<>(); //conjunto de todas as vendas
+    final private ArrayList<Estoque> estoque = new ArrayList<>(); //conjunto de todos os itens do estoque
+    final private ArrayList<Produto> produtoLoja = new ArrayList<>(); //todos os produtos ofertados na loja
+    final private ArrayList<Funcionario> funcionarios = new ArrayList<>(); //conjunto de todos os funcionários
 
 
     public Loja(String nome) {
@@ -80,7 +80,7 @@ public class Loja {
         this.estoque.remove(estoque);
     }
 
-    public void adicionaProduto(Produto produto){
+    public void adicionaProduto(Produto produto){ //Adiciona um produto na lista da loja e cria todas as entradas de estoque associadas a este produto
         produtoLoja.add(produto);
         int inicio = 33;
         int fim = 45;
@@ -116,7 +116,7 @@ public class Loja {
         return saldoVendas;
     }
 
-    public List<Estoque> retornaEstoqueProduto(Produto produto){ //Retorna todos os estoques de um produtos
+    public List<Estoque> retornaEstoqueProduto(Produto produto){ //Retorna todos os estoques de um produto
         ArrayList<Estoque> resultado = new ArrayList<>();
         for (Estoque itemEstoque: estoque) {
             if(itemEstoque.getProduto().equals(produto)){
