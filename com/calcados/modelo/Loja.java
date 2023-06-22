@@ -35,6 +35,12 @@ public class Loja {
 //        adicionaItem(p234);
 //        adicionaItem(p239);
 
+        Funcionario v1 = new Vendedor("Maria Clara", "14567829745", "8397654738","Patos", 1250, "uuu", 0.2);
+        Funcionario v2 = new Vendedor("Maurício", "98645302712", "83993564829","São João", 1250, "vendedor", 0.2);
+        adicionaFuncionario(v1);
+        adicionaFuncionario(v2);
+
+
     }
 
     public String getNome() {

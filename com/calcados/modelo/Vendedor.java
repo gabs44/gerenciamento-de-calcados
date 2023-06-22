@@ -69,7 +69,7 @@ public class Vendedor extends Funcionario implements Comissionado {
 
     @Override
     public String getFuncao() {
-        return "com.calcados.modelo.Vendedor";
+        return "Vendedor";
     }
 
 

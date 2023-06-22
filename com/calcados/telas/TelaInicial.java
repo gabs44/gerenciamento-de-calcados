@@ -132,6 +132,9 @@ public class TelaInicial extends JFrame {
             botaoFuncionarios.addMouseListener(new MouseAdapter() {
                 @Override
                 public void mouseClicked(MouseEvent e) {
+                    ehHome = false;
+                    limparContainer(painel);
+                    TelaFuncionarios.criaTelaFuncionario(painel, loja);
                     System.out.println("Quantidade de cliques: "
                             +e.getClickCount());
                     System.out.println("Local: "+e.getPoint());
