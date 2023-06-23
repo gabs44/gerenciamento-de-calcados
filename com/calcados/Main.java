@@ -24,8 +24,6 @@ public class Main {
 
 
 
-
-
         String marca = "Santa Lola";
         String descricao = "salto alto fino";
         String cor = "preto";

@@ -60,7 +60,7 @@ public class TelaFuncionarios {
         botaoNovoFuncionario.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                TelaFormularioFuncionario telaFormularioFuncionario= new TelaFormularioFuncionario(null);
+                TelaFormularioFuncionario telaFormularioFuncionario= new TelaFormularioFuncionario(null, loja);
                 telaFormularioFuncionario.setVisible(true);
             }
         });

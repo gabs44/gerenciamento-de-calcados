@@ -43,7 +43,7 @@ public class TelaSenha extends JFrame {
             public void mouseClicked(MouseEvent e) {
                 String senhaInformada = campoSenha.getText();
                 if(Objects.equals(senhaInformada, senha)){
-                    TelaFormularioFuncionario telaFormularioFuncionario = new TelaFormularioFuncionario(funcionario);
+                    TelaFormularioFuncionario telaFormularioFuncionario = new TelaFormularioFuncionario(funcionario, loja);
                     telaFormularioFuncionario.setVisible(true);
                 } else {
                     JOptionPane.showMessageDialog(null,
