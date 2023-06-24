@@ -8,6 +8,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.time.LocalDate;
 
 public class TelaFormularioFuncionario extends JFrame {
     Funcionario funcionario;
@@ -44,8 +45,22 @@ public class TelaFormularioFuncionario extends JFrame {
 
     private void inserirLabels(Container painel){
         String titulo = "Novo funcionário";
+        Font fonteLabels = new Font("Arial", Font.BOLD, 14);
+
         if(ehEdicao()){
             titulo = "Editar";
+
+            LocalDate hoje = LocalDate.now();
+
+            JLabel labelComissao = new JLabel("Comissão Atual");
+            labelComissao.setBounds(35, 250, 380, 30);
+            labelComissao.setFont(fonteLabels);
+            painel.add(labelComissao);
+
+            Vendedor vendedor = (Vendedor) funcionario;
+            JLabel labelValorComissao = new JLabel(String.valueOf(vendedor.calculaComissao(hoje.getMonthValue(), hoje.getYear())));
+            labelValorComissao.setBounds(165, 250, 250, 30);
+            painel.add(labelValorComissao);
         }
         JLabel labelTitulo = new JLabel(titulo);
         labelTitulo.setBounds(20, 20, 380, 30);
@@ -55,7 +70,7 @@ public class TelaFormularioFuncionario extends JFrame {
         labelTitulo.setHorizontalAlignment(JLabel.CENTER);
         painel.add(labelTitulo);
 
-        Font fonteLabels = new Font("Arial", Font.BOLD, 14);
+
 
         JLabel labelNomeCompleto = new JLabel("Nome completo");
         labelNomeCompleto.setBounds(35, 70, 380, 30);

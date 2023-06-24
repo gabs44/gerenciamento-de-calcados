@@ -161,6 +161,9 @@ public class TelaInicial extends JFrame {
                     System.out.println("Quantidade de cliques: "
                             +e.getClickCount());
                     System.out.println("Local: "+e.getPoint());
+                    ehHome = false;
+                    limparContainer(painel);
+                    TelaCaixa.criaTelaFuncionario(painel, loja);
                 }
 
                 @Override

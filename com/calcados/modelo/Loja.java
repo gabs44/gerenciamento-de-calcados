@@ -124,7 +124,8 @@ public class Loja {
     public double calculaFaturamento(LocalDate dataInicio, LocalDate dataLimite) {
         double saldoVendas = 0;
         for (Venda venda : vendas) {
-            if (venda.getData().isAfter(dataInicio) && venda.getData().isBefore(dataLimite)) {
+            LocalDate dataVenda = venda.getData();
+            if (dataVenda.isAfter(dataInicio.minusDays(1)) && dataVenda.isBefore(dataLimite.plusDays(1))) {
                 saldoVendas += venda.calculaTotal();
             }
         }
