@@ -59,11 +59,11 @@ public class Vendedor extends Funcionario implements Comissionado {
 
 
 
-    void adicionaVenda(Venda venda){
+    public void adicionaVenda(Venda venda){
         vendas.add(venda);
     }
 
-    void removeVenda(Venda venda){
+    public void removeVenda(Venda venda){
         vendas.remove(venda);
     }
 

@@ -18,10 +18,12 @@ public class Loja {
     public Loja(String nome) {
         this.nome = nome;
 
-        Produto p1 = new Produto("12345", "Santa lola", 150, "preto", "salto", FaixaEtaria.Adulto );
+        Produto p1 = new Produto("12345", "Santa Lola", 150, "Preto", "Salto", FaixaEtaria.Adulto );
         adicionaProduto(p1);
-        Produto p2 = new Produto("56792", "Grendene", 150, "preto", "salto", FaixaEtaria.Infantil );
+        Produto p2 = new Produto("56792", "Grendene", 150, "Preto", "Salto", FaixaEtaria.Infantil );
         adicionaProduto(p2);
+        procurarItemNoEstoque(p1, 35).setQuantidadeEmEstoque(5);
+        procurarItemNoEstoque(p2, 30).setQuantidadeEmEstoque(3);
 
 //        Estoque p137 = new Estoque(p1, 8, 37);
 //        Estoque p135 = new Estoque(p1, 3, 35);
@@ -129,10 +131,20 @@ public class Loja {
         return saldoVendas;
     }
 
-    public List<Estoque> retornaEstoqueProduto(Produto produto){ //Retorna todos os estoques de um produto
+    public List<Estoque> retornaEstoqueProduto(Produto produto){ //Retorna todos os estoques de um produto, incluindo os que não estão disponíveis
         ArrayList<Estoque> resultado = new ArrayList<>();
         for (Estoque itemEstoque: estoque) {
             if(itemEstoque.getProduto().equals(produto)){
+                resultado.add(itemEstoque);
+            }
+        }
+        return resultado;
+    }
+
+    public List<Estoque> retornaEstoqueComNumeracaoDisponivel(Produto produto){
+        ArrayList<Estoque> resultado = new ArrayList<>();
+        for (Estoque itemEstoque: retornaEstoqueProduto(produto)) {
+            if(itemEstoque.getQuantidadeEmEstoque()>0){
                 resultado.add(itemEstoque);
             }
         }
@@ -146,6 +158,19 @@ public class Loja {
             }
         }
         return null;
+    }
+
+    public List<Produto> retornaProdutosEmEstoque(){
+        ArrayList<Produto> resultado = new ArrayList<>();
+        for (Produto produto: produtoLoja) {
+            for (Estoque itemEstoque: retornaEstoqueProduto(produto)) {
+                if(itemEstoque.getQuantidadeEmEstoque() > 0){
+                    resultado.add(produto);
+                    break;
+                }
+            }
+        }
+        return resultado;
     }
 
 

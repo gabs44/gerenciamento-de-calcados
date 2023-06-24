@@ -41,11 +41,11 @@ public class ItemVenda {
         return quantidade * precoUnitario;
     }
 
-    void aumentaQuantidade(){
+    public void aumentaQuantidade(){
         quantidade++;
     }
 
-    void diminuiQuantidade(){
+    public void diminuiQuantidade(){
         quantidade--;
 
     }

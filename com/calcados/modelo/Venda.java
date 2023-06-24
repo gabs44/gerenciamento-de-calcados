@@ -51,11 +51,11 @@ public class Venda {
     }
 
 
-    void adicionaItem(ItemVenda itemVenda){
+    public void adicionaItem(ItemVenda itemVenda){
         itens.add(itemVenda);
     }
 
-    void removeItem(ItemVenda itemVenda){
+    public void removeItem(ItemVenda itemVenda){
         itens.remove(itemVenda);
     }
 }
