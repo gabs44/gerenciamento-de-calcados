@@ -25,18 +25,6 @@ public class Loja {
         procurarItemNoEstoque(p1, 35).setQuantidadeEmEstoque(5);
         procurarItemNoEstoque(p2, 30).setQuantidadeEmEstoque(3);
 
-//        Estoque p137 = new Estoque(p1, 8, 37);
-//        Estoque p135 = new Estoque(p1, 3, 35);
-//        Estoque p237= new Estoque(p2, 9, 37);
-//        Estoque p234= new Estoque(p2, 2, 34);
-//        Estoque p239= new Estoque(p2, 5, 39);
-//
-//        adicionaItem(p137);
-//        adicionaItem(p135);
-//        adicionaItem(p237);
-//        adicionaItem(p234);
-//        adicionaItem(p239);
-
         Vendedor v1 = new Vendedor("Maria Clara", "14567829745", "8397654738","Patos", 1250, "uuu", 0.2);
         Funcionario v2 = new Vendedor("Maurício", "98645302712", "83993564829","São João", 1250, "vendedor", 0.2);
         adicionaFuncionario(v1);
