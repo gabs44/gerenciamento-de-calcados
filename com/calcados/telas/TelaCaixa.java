@@ -100,7 +100,7 @@ public class TelaCaixa {
         painel.add(labelDataFinal);
 
         JLabel resultado = new JLabel("");
-        resultado.setBounds(20, 160, 300, 30);
+        resultado.setBounds(350, 200, 300, 30);
         resultado.setFont(new Font("Arial", Font.BOLD, 28));
         painel.add(resultado);
 
