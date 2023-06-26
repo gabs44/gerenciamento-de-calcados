@@ -9,8 +9,7 @@ import java.util.UUID;
 public class Venda {
     final private UUID codigo = UUID.randomUUID();
     private LocalDate data;
-    private Vendedor vendedor;
-    // Implementa agregação
+    private Vendedor vendedor; // Implementa agregação
     private ArrayList<ItemVenda> itens = new ArrayList<ItemVenda>();
 
     public Venda(LocalDate data, Vendedor vendedor) {

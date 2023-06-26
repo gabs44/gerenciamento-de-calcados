@@ -22,7 +22,7 @@ public class TelaDetalhes extends JFrame {
         this.venda = venda;
         this.loja = loja;
 
-        setSize(600,600);
+        setSize(590,520);
         setLocationRelativeTo(null);
         Container painel = getContentPane();
         painel.setLayout(null);

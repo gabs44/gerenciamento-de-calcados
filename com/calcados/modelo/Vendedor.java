@@ -70,7 +70,7 @@ public class Vendedor extends Funcionario implements Comissionado {
     @Override
     public String getFuncao() {
         return "Vendedor";
-    }
+    } //sobrescrita
 
 
 }

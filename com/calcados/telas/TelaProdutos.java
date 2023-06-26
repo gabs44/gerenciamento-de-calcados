@@ -35,10 +35,10 @@ public class TelaProdutos {
             dados[i][4] = produto.getDescricao();
             dados[i][5] = String.valueOf(produto.getFaixaEtaria());
             JButton detalhes = new JButton("Detalhes");
-            detalhes.setFont(new Font("Arial", Font.BOLD, 8));
-            detalhes.setBounds(largura,altura,75,15);
+            detalhes.setFont(new Font("Arial", Font.BOLD, 9));
+            detalhes.setBounds(largura,altura,85,25);
             painel.add(detalhes);
-            altura+=15;
+            altura+=26;
 
             detalhes.addMouseListener(new MouseAdapter() {
                 @Override
@@ -51,6 +51,7 @@ public class TelaProdutos {
         }
 
         JTable tabela = new JTable(dados, colunas);
+        tabela.setRowHeight(25);
         JScrollPane barraRolagem = new JScrollPane(tabela);
 
         barraRolagem.setBounds(20, 100, 690, 550); // define o tamanho do JScrollPane

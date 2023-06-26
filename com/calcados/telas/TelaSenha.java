@@ -32,7 +32,7 @@ public class TelaSenha extends JFrame {
         labelSEnha.setBounds(25, 50, 200, 30);
         labelSEnha.setFont(Font.getFont("Arial"));
         painel.add(labelSEnha);
-        JTextField campoSenha = new JTextField();
+        JPasswordField campoSenha = new JPasswordField ();
         campoSenha.setBounds(25, 100, 200, 30);
         painel.add(campoSenha);
         JButton botaoSalvar = new JButton("Avançar");

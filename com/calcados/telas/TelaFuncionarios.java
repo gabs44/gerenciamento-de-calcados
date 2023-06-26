@@ -30,10 +30,10 @@ public class TelaFuncionarios {
             dados[i][0] = funcionario.getNomeCompleto();
             dados[i][1] = funcionario.getFuncao();
             JButton verMais = new JButton("Ver mais");
-            verMais.setFont(new Font("Arial", Font.BOLD, 8));
-            verMais.setBounds(largura,altura,75,15);
+            verMais.setFont(new Font("Arial", Font.BOLD, 9));
+            verMais.setBounds(largura,altura,80,25);
             painel.add(verMais);
-            altura+=15;
+            altura+=26;
 
             verMais.addMouseListener(new MouseAdapter() {
                 @Override
@@ -45,6 +45,7 @@ public class TelaFuncionarios {
         }
 
         JTable tabela = new JTable(dados, colunas);
+        tabela.setRowHeight(25);
         JScrollPane barraRolagem = new JScrollPane(tabela);
 
         barraRolagem.setBounds(20, 100, 690, 550); // define o tamanho do JScrollPane

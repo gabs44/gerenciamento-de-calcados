@@ -37,7 +37,7 @@ public class ItemVenda {
         this.quantidade = quantidade;
     }
 
-    double calculaTotal(){
+    public double calculaTotal(){
         return quantidade * precoUnitario;
     }
 

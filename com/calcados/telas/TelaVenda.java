@@ -49,10 +49,10 @@ public class TelaVenda {
             dados[i][2] = String.valueOf(venda.calculaTotal());
             dados[i][3] = String.valueOf(venda.getVendedor().getNomeCompleto());
             JButton detalhes = new JButton("Ver itens");
-            detalhes.setFont(new Font("Arial", Font.BOLD, 8));
-            detalhes.setBounds(largura,altura,75,17);
+            detalhes.setFont(new Font("Arial", Font.BOLD, 9));
+            detalhes.setBounds(largura,altura,100,25);
             painel.add(detalhes);
-            altura+=15;
+            altura+=26;
 
             detalhes.addMouseListener(new MouseAdapter() {
                 @Override
@@ -66,6 +66,8 @@ public class TelaVenda {
         }
 
         JTable tabela = new JTable(dados, colunas);
+        tabela.setRowHeight(25);
+
         JScrollPane barraRolagem = new JScrollPane(tabela);
 
         barraRolagem.setBounds(63, 100, 600, 550); // define o tamanho do JScrollPane
