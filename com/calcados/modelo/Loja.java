@@ -130,7 +130,7 @@ public class Loja {
         return resultado;
     }
 
-    public List<Estoque> retornaEstoqueComNumeracaoDisponivel(Produto produto){
+    public List<Estoque> retornaEstoqueComNumeracaoDisponivel(Produto produto){ //produtos com numeração disponível para venda
         ArrayList<Estoque> resultado = new ArrayList<>();
         for (Estoque itemEstoque: retornaEstoqueProduto(produto)) {
             if(itemEstoque.getQuantidadeEmEstoque()>0){
@@ -149,7 +149,7 @@ public class Loja {
         return null;
     }
 
-    public List<Produto> retornaProdutosEmEstoque(){
+    public List<Produto> retornaProdutosEmEstoque(){ //produtos que tem pelo menos 1 item no estoque
         ArrayList<Produto> resultado = new ArrayList<>();
         for (Produto produto: produtoLoja) {
             for (Estoque itemEstoque: retornaEstoqueProduto(produto)) {
