@@ -1,6 +1,6 @@
 package com.calcados.telas;
 
-import com.calcados.modelo.Loja;
+import com.calcados.modelo.*;
 
 import javax.swing.*;
 import java.awt.*;
@@ -8,10 +8,17 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.util.ArrayList;
 
 public class TelaInicial extends JFrame {
     private boolean ehHome = true;
-    private Loja loja = new Loja("Gabriella");
+
+    ArrayList<Venda> vendas = new ArrayList<>();
+    ArrayList<Estoque> estoque = new ArrayList<Estoque>();
+    ArrayList<Produto> produtoLoja = new ArrayList<Produto>();
+    ArrayList<Funcionario> funcionarios = new ArrayList<>();
+
+    private Loja loja = new Loja("Gabriella", vendas, estoque, produtoLoja, funcionarios);
 
         public TelaInicial(){
             super("Gerenciamento de calçados");

@@ -9,14 +9,18 @@ import java.util.List;
 
 public class Loja {
     String nome; //nome da loja
-    final private ArrayList<Venda> vendas = new ArrayList<>(); //conjunto de todas as vendas
-    final private ArrayList<Estoque> estoque = new ArrayList<>(); //conjunto de todos os itens do estoque
-    final private ArrayList<Produto> produtoLoja = new ArrayList<>(); //todos os produtos ofertados na loja
-    final private ArrayList<Funcionario> funcionarios = new ArrayList<>(); //conjunto de todos os funcionários
+    final private ArrayList<Venda> vendas ; //conjunto de todas as vendas
+    final private ArrayList<Estoque> estoque; //conjunto de todos os itens do estoque
+    final private ArrayList<Produto> produtoLoja; //todos os produtos ofertados na loja
+    final private ArrayList<Funcionario> funcionarios; //conjunto de todos os funcionários
 
 
-    public Loja(String nome) {
+    public Loja(String nome, ArrayList<Venda> vendas, ArrayList<Estoque> estoque, ArrayList<Produto> produtoLoja, ArrayList<Funcionario> funcionarios) {
         this.nome = nome;
+        this.vendas = new ArrayList<>();
+        this.estoque = new ArrayList<>();
+        this.produtoLoja = new ArrayList<>();
+        this.funcionarios = new ArrayList<>();
 
         Produto p1 = new Produto("12345", "Santa Lola", 150, "Preto", "Salto", FaixaEtaria.Adulto );
         adicionaProduto(p1);

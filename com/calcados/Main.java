@@ -39,7 +39,12 @@ public class Main {
 //        System.out.printf("Existem %d produtos com a descricao %s no estoque \n", quantidade, descricao );
 
         int resposta;
-        Loja loja = new Loja(nomeLoja);
+
+        ArrayList<Venda> vendas = new ArrayList<>();
+        ArrayList<Estoque> estoque = new ArrayList<Estoque>();
+        ArrayList<Produto> produtoLoja = new ArrayList<Produto>();
+        ArrayList<Funcionario> funcionarios = new ArrayList<>();
+        Loja loja = new Loja(nomeLoja,vendas, estoque, produtoLoja, funcionarios);
         Produto p1 = new Produto("P0001", "vizano", 159.90, "vermelho", "Salto alto", FaixaEtaria.Adulto);
 
         Estoque estoque1 = new Estoque(p1, 10, 36);
@@ -69,9 +74,9 @@ public class Main {
 
             switch (resposta){
                 case 1:
-                    ArrayList<Venda> vendas = (ArrayList<Venda>) loja.getVendas();
+                    ArrayList<Venda> vendasLoja = (ArrayList<Venda>) loja.getVendas();
                     int idx = 1;
-                    for (Venda venda: vendas) {
+                    for (Venda venda: vendasLoja) {
                         System.out.println("Código: " + idx+") " +venda.getCodigo());
                         System.out.println("Data: " + venda.getData());
                         System.out.println("Total: "+ venda.calculaTotal());
